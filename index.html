@@ -415,39 +415,41 @@
       </div>
       <div class="contact-form">
         <h3>Request a Free Consultation</h3>
-        <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"/></div>
-          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
-        </div>
-        <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Company Inc."/></div>
-        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@yourcompany.ca"/></div>
-        <div class="form-group">
-          <label>I'm interested in…</label>
-          <select>
-            <option value="">Select a service area</option>
-            <optgroup label="IT Services">
-              <option>Help Desk / IT Support</option>
-              <option>Cybersecurity</option>
-              <option>Network Management</option>
-              <option>Cloud Services</option>
-              <option>Backup &amp; Recovery</option>
-              <option>IT Consulting</option>
-            </optgroup>
-            <optgroup label="Accounting &amp; Business">
-              <option>Payroll</option>
-              <option>Bookkeeping</option>
-              <option>Personal / Corporate Tax</option>
-              <option>Corporation Setup</option>
-              <option>GST / PST Filing</option>
-              <option>New Business Setup</option>
-              <option>ERP Implementation</option>
-              <option>AP / AR Services</option>
-            </optgroup>
-            <option>Both IT &amp; Accounting Services</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Tell us about your needs</label><textarea placeholder="Brief description of what you're looking for…"></textarea></div>
-        <button type="button" class="form-submit">Send My Request →</button>
+        <form action="https://formspree.io/f/xojpeeak" method="POST">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John" required/></div>
+            <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required/></div>
+          </div>
+          <div class="form-group"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Company Inc."/></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="john@yourcompany.ca" required/></div>
+          <div class="form-group">
+            <label>I'm interested in…</label>
+            <select name="service">
+              <option value="">Select a service area</option>
+              <optgroup label="IT Services">
+                <option>Help Desk / IT Support</option>
+                <option>Cybersecurity</option>
+                <option>Network Management</option>
+                <option>Cloud Services</option>
+                <option>Backup &amp; Recovery</option>
+                <option>IT Consulting</option>
+              </optgroup>
+              <optgroup label="Accounting &amp; Business">
+                <option>Payroll</option>
+                <option>Bookkeeping</option>
+                <option>Personal / Corporate Tax</option>
+                <option>Corporation Setup</option>
+                <option>GST / PST Filing</option>
+                <option>New Business Setup</option>
+                <option>ERP Implementation</option>
+                <option>AP / AR Services</option>
+              </optgroup>
+              <option>Both IT &amp; Accounting Services</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Tell us about your needs</label><textarea name="message" placeholder="Brief description of what you're looking for…"></textarea></div>
+          <button type="submit" class="form-submit">Send My Request →</button>
+        </form>
       </div>
     </div>
   </section>
@@ -509,11 +511,6 @@
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       nav.style.boxShadow = window.scrollY > 40 ? '0 4px 32px rgba(0,0,0,0.25)' : 'none';
-    });
-    document.querySelector('.form-submit').addEventListener('click', function() {
-      this.textContent = "✓ Message Sent! We'll be in touch soon.";
-      this.style.background = '#1a6b3c';
-      this.disabled = true;
     });
   </script>
 </body>
