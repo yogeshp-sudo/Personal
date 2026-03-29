@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT Yogi Business Solutions Ltd. | IT & Accounting Services</title>
+  <meta name="description" content="IT Yogi Business Solutions Ltd. — Your trusted partner for Managed IT Services, Cybersecurity, and Professional Accounting & Business Solutions."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy:       #0B1D3A;
+      --navy-light: #132444;
+      --gold:       #C9952A;
+      --gold-light: #E4B455;
+      --cream:      #F7F4EE;
+      --white:      #FFFFFF;
+      --gray:       #6B7280;
+      --gray-light: #E5E7EB;
+      --text:       #1F2937;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      background: rgba(11,29,58,0.97); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,149,42,0.25);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 72px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-mark {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: var(--navy);
+    }
+    .nav-logo-text { color: var(--white); }
+    .nav-logo-text span { display: block; }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; letter-spacing: 0.04em; }
+    .sub   { font-size: 11px; color: var(--gold-light); letter-spacing: 0.12em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta {
+      background: var(--gold); color: var(--navy); border: none; padding: 10px 22px; border-radius: 6px;
+      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer;
+      transition: background .2s, transform .15s; text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; background: var(--navy); position: relative; overflow: hidden;
+      display: flex; align-items: center; padding: 120px 5% 80px;
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(201,149,42,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,149,42,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-bg-orb { position: absolute; border-radius: 50%; pointer-events: none; }
+    .hero-bg-orb-1 { width: 600px; height: 600px; right: -100px; top: -150px; background: radial-gradient(circle, rgba(201,149,42,0.12) 0%, transparent 70%); }
+    .hero-bg-orb-2 { width: 400px; height: 400px; left: -80px; bottom: -100px; background: radial-gradient(circle, rgba(228,180,85,0.07) 0%, transparent 70%); }
+    .hero-content { position: relative; z-index: 2; max-width: 720px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--gold-light); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 24px;
+      animation: fadeInUp .7s .1s both;
+    }
+    .hero-eyebrow::before { content: ''; width: 36px; height: 1px; background: var(--gold); }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 6vw, 76px);
+      font-weight: 600; line-height: 1.08; color: var(--white); margin-bottom: 24px;
+      animation: fadeInUp .7s .25s both;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-desc { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.7); max-width: 560px; margin-bottom: 40px; font-weight: 300; animation: fadeInUp .7s .4s both; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp .7s .55s both; }
+    .btn-primary {
+      background: var(--gold); color: var(--navy); padding: 15px 32px; border-radius: 6px;
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s; display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,149,42,0.4); }
+    .btn-outline {
+      background: transparent; color: var(--white); padding: 15px 32px; border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.3); font-weight: 500; font-size: 15px; text-decoration: none;
+      transition: border-color .2s, color .2s; display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 64px; padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1); flex-wrap: wrap;
+      animation: fadeInUp .7s .7s both;
+    }
+    .hero-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: var(--gold-light); line-height: 1; }
+    .hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; letter-spacing: 0.05em; }
+
+    /* SECTION COMMONS */
+    section { padding: 96px 5%; }
+    .section-tag {
+      display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); padding: 6px 14px; border: 1px solid var(--gold); border-radius: 20px; margin-bottom: 20px;
+    }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 600; line-height: 1.15; color: var(--navy); margin-bottom: 16px; }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-subtitle { font-size: 17px; line-height: 1.7; color: var(--gray); max-width: 560px; font-weight: 300; }
+
+    /* PILLARS */
+    .pillars { background: var(--cream); }
+    .pillars-intro { text-align: center; margin-bottom: 64px; }
+    .pillars-intro .section-subtitle { margin: 0 auto; }
+    .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .pillar-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.07); transition: box-shadow .3s, transform .3s; }
+    .pillar-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.12); transform: translateY(-4px); }
+    .pillar-header { padding: 36px 36px 28px; background: var(--navy); position: relative; overflow: hidden; }
+    .pillar-header::after { content: ''; position: absolute; bottom: 0; right: 0; width: 120px; height: 120px; background: radial-gradient(circle at bottom right, rgba(201,149,42,0.2), transparent 70%); }
+    .pillar-icon { width: 52px; height: 52px; margin-bottom: 16px; background: rgba(201,149,42,0.15); border: 1px solid rgba(201,149,42,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .pillar-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .pillar-header p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; }
+    .pillar-services { padding: 32px 36px 36px; }
+    .pillar-services ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .pillar-services li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--text); padding: 12px 16px; border-radius: 8px; background: var(--cream); transition: background .2s; }
+    .pillar-services li:hover { background: #ede9df; }
+    .pillar-services li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* WHY US */
+    .why { background: var(--white); }
+    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .why-visual { position: relative; height: 460px; }
+    .why-card-base { position: absolute; border-radius: 12px; padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+    .why-card-main { background: var(--navy); color: var(--white); top: 0; left: 0; right: 40px; bottom: 60px; }
+    .why-card-main h4 { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--gold-light); margin-bottom: 12px; }
+    .why-card-main p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; font-weight: 300; }
+    .why-card-float { background: var(--gold); color: var(--navy); bottom: 0; right: 0; left: 60px; top: auto; padding: 24px 28px; }
+    .why-card-float .num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; line-height: 1; }
+    .why-card-float p { font-size: 13px; font-weight: 600; letter-spacing: 0.05em; margin-top: 4px; }
+    .why-features { display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
+    .why-feature { display: flex; gap: 20px; align-items: flex-start; padding: 20px; border-radius: 10px; border: 1px solid var(--gray-light); transition: border-color .2s, box-shadow .2s; }
+    .why-feature:hover { border-color: var(--gold); box-shadow: 0 2px 12px rgba(201,149,42,0.1); }
+    .why-feature-icon { width: 44px; height: 44px; flex-shrink: 0; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .why-feature h5 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .why-feature p { font-size: 14px; color: var(--gray); line-height: 1.6; font-weight: 300; }
+
+    /* PROCESS */
+    .process { background: var(--navy); }
+    .process .section-title { color: var(--white); }
+    .process .section-subtitle { color: rgba(255,255,255,0.6); }
+    .process-intro { margin-bottom: 64px; }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 36px; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), var(--gold), transparent); opacity: 0.3; }
+    .process-step { text-align: center; position: relative; z-index: 1; }
+    .process-step-num { width: 72px; height: 72px; margin: 0 auto 20px; background: rgba(201,149,42,0.12); border: 1px solid rgba(201,149,42,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--gold-light); }
+    .process-step h4 { color: var(--white); font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .process-step p { color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.6; font-weight: 300; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--cream); }
+    .testimonials-intro { text-align: center; margin-bottom: 56px; }
+    .testimonials-intro .section-subtitle { margin: 0 auto; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testimonial-card { background: var(--white); border-radius: 12px; padding: 32px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); position: relative; }
+    .testimonial-card::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 80px; line-height: 1; color: var(--gold); opacity: 0.3; position: absolute; top: 16px; left: 24px; }
+    .testimonial-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; }
+    .testimonial-text { font-size: 15px; line-height: 1.7; color: var(--text); font-style: italic; margin-bottom: 20px; font-weight: 300; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--navy-light)); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: var(--gold-light); font-size: 16px; }
+    .testimonial-name { font-weight: 600; font-size: 14px; }
+    .testimonial-title { font-size: 12px; color: var(--gray); }
+
+    /* CONTACT */
+    .contact { background: var(--white); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+    .contact-info { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-item-icon { width: 44px; height: 44px; flex-shrink: 0; background: var(--navy); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .contact-item h5 { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+    .contact-item p { font-size: 14px; color: var(--gray); }
+    .contact-form { background: var(--cream); border-radius: 16px; padding: 40px; }
+    .contact-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--navy); margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: 0.03em; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--gray-light); background: var(--white); font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text); transition: border-color .2s, box-shadow .2s; outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,149,42,0.1); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; padding: 15px; background: var(--navy); color: var(--white); border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: background .2s, transform .15s; }
+    .form-submit:hover { background: #18305e; transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 64px 5% 32px; }
+    .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; font-weight: 300; margin-top: 16px; max-width: 280px; }
+    .footer-col h4 { color: var(--white); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 14px; transition: color .2s; }
+    .footer-col li a:hover { color: var(--gold-light); }
+    .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-bottom p { font-size: 13px; }
+    .footer-gold { color: var(--gold-light); }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .pillars-grid, .why-inner, .contact-inner { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .why-visual { height: 300px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-stats { gap: 24px; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">IY</div>
+      <div class="nav-logo-text">
+        <span class="brand">IT Yogi</span>
+        <span class="sub">Business Solutions Ltd.</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get a Free Consultation</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-bg-orb hero-bg-orb-1"></div>
+    <div class="hero-bg-orb hero-bg-orb-2"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Trusted by Businesses Across Canada</div>
+      <h1>Your Partner in <em>Technology</em><br/>& Business Growth</h1>
+      <p class="hero-desc">IT Yogi Business Solutions Ltd. delivers expert Managed IT Services and comprehensive Accounting & Business Solutions — so you can focus on what matters most: growing your business.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get a Free Consultation</a>
+        <a href="#services" class="btn-outline">Explore Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Canadian Owned</div></div>
+        <div><div class="hero-stat-num">2-in-1</div><div class="hero-stat-label">IT + Accounting Partner</div></div>
+        <div><div class="hero-stat-num">24/7</div><div class="hero-stat-label">IT Support Available</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars" id="services">
+    <div class="pillars-intro">
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">Two Pillars, <em>One Partner</em></h2>
+      <p class="section-subtitle">We combine deep technology expertise with professional accounting knowledge to serve as your all-in-one business solutions partner.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-header">
+          <div class="pillar-icon">💻</div>
+          <h3>Managed IT Services</h3>
+          <p>Reliable, proactive technology management so your business stays secure, connected, and running smoothly at all times.</p>
+        </div>
+        <div class="pillar-services">
+          <ul>
+            <li>Help Desk &amp; Technical Support</li>
+            <li>Cybersecurity &amp; Threat Protection</li>
+            <li>Network Management &amp; Monitoring</li>
+            <li>Cloud Services &amp; Migration</li>
+            <li>Backup &amp; Disaster Recovery</li>
+            <li>IT Consulting &amp; Strategy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-header">
+          <div class="pillar-icon">📊</div>
+          <h3>Accounting &amp; Business Services</h3>
+          <p>Comprehensive financial and administrative solutions to keep your business compliant, organized, and positioned for success.</p>
+        </div>
+        <div class="pillar-services">
+          <ul>
+            <li>Payroll Processing &amp; Management</li>
+            <li>Bookkeeping &amp; Financial Reporting</li>
+            <li>Personal &amp; Corporate Tax Returns</li>
+            <li>Corporation Setup &amp; Registration</li>
+            <li>GST / PST Filing &amp; Compliance</li>
+            <li>New Business Setup &amp; Advisory</li>
+            <li>ERP Implementation &amp; Support</li>
+            <li>Accounts Payable &amp; Receivable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why-us">
+    <div class="why-inner">
+      <div class="why-visual">
+        <div class="why-card-base why-card-main">
+          <h4>One Vendor. Total Peace of Mind.</h4>
+          <p>Instead of juggling multiple vendors for your IT and accounting needs, IT Yogi consolidates everything under one roof. We communicate between departments so you don't have to — and our integrated approach means your systems and finances always work in harmony.</p>
+        </div>
+        <div class="why-card-base why-card-float">
+          <div class="num">100%</div>
+          <p>Dedicated to Canadian Businesses</p>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag">Why IT Yogi</div>
+        <h2 class="section-title">The Smart Choice for <em>Growing Businesses</em></h2>
+        <p class="section-subtitle">We're built differently — combining technical depth with business acumen to serve you completely.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">🛡️</div>
+            <div><h5>Proactive, Not Reactive</h5><p>We monitor and manage your systems around the clock, solving problems before they impact your business.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🤝</div>
+            <div><h5>True Business Partnership</h5><p>We take the time to understand your goals and tailor every solution — whether IT or financial — to fit your unique needs.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🇨🇦</div>
+            <div><h5>Canadian Compliance Expertise</h5><p>Deep knowledge of Canadian tax law, GST/PST regulations, and data privacy requirements — so you stay compliant and protected.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="process-intro">
+      <div class="section-tag">How We Work</div>
+      <h2 class="section-title">Getting Started is Simple</h2>
+      <p class="section-subtitle">From first call to full service — we make onboarding fast, easy, and painless.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step"><div class="process-step-num">01</div><h4>Free Consultation</h4><p>We start with a no-obligation discovery call to understand your business, challenges, and goals.</p></div>
+      <div class="process-step"><div class="process-step-num">02</div><h4>Custom Proposal</h4><p>We design a tailored service plan with clear pricing — covering IT, accounting, or both.</p></div>
+      <div class="process-step"><div class="process-step-num">03</div><h4>Smooth Onboarding</h4><p>Our team handles the entire transition, minimizing disruption and getting your systems set up quickly.</p></div>
+      <div class="process-step"><div class="process-step-num">04</div><h4>Ongoing Partnership</h4><p>Continuous support, regular reporting, and strategic reviews to keep your business thriving.</p></div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials-intro">
+      <div class="section-tag">Client Stories</div>
+      <h2 class="section-title">Trusted by <em>Canadian Businesses</em></h2>
+      <p class="section-subtitle">Here's what our clients say about working with IT Yogi Business Solutions.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">IT Yogi set up our entire network and handles our monthly bookkeeping. Having one team for both has saved us so much time and confusion. Highly recommend to any small business.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SM</div>
+          <div><div class="testimonial-name">S. Mehta</div><div class="testimonial-title">Owner, Retail Business — Calgary, AB</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Their cybersecurity audit found vulnerabilities we had no idea about. They fixed everything and now we have total peace of mind. Our payroll processing has also been spotless every month.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JL</div>
+          <div><div class="testimonial-name">J. Laurent</div><div class="testimonial-title">Director, Consulting Firm — Vancouver, BC</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">They helped us incorporate, get our GST number, and set up our IT infrastructure all at once. Starting our business was so much smoother than expected. A truly one-stop shop.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PR</div>
+          <div><div class="testimonial-name">P. Reyes</div><div class="testimonial-title">Co-Founder, Tech Startup — Toronto, ON</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's Talk About <em>Your Business</em></h2>
+        <p class="section-subtitle">Ready to simplify your IT and accounting? Book a free consultation — no pressure, no obligation.</p>
+        <div class="contact-info">
+          <div class="contact-item"><div class="contact-item-icon">📧</div><div><h5>Email Us</h5><p>info@ityogi.ca</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📞</div><div><h5>Call Us</h5><p>+1 (XXX) XXX-XXXX</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📍</div><div><h5>Location</h5><p>Serving businesses across Canada</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">⏰</div><div><h5>Business Hours</h5><p>Mon – Fri: 9 AM – 6 PM | 24/7 IT Emergency Support</p></div></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request a Free Consultation</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"/></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+        </div>
+        <div class="form-group"><label>Business Name</label><input type="text" placeholder="Your Company Inc."/></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@yourcompany.ca"/></div>
+        <div class="form-group">
+          <label>I'm interested in…</label>
+          <select>
+            <option value="">Select a service area</option>
+            <optgroup label="IT Services">
+              <option>Help Desk / IT Support</option>
+              <option>Cybersecurity</option>
+              <option>Network Management</option>
+              <option>Cloud Services</option>
+              <option>Backup &amp; Recovery</option>
+              <option>IT Consulting</option>
+            </optgroup>
+            <optgroup label="Accounting &amp; Business">
+              <option>Payroll</option>
+              <option>Bookkeeping</option>
+              <option>Personal / Corporate Tax</option>
+              <option>Corporation Setup</option>
+              <option>GST / PST Filing</option>
+              <option>New Business Setup</option>
+              <option>ERP Implementation</option>
+              <option>AP / AR Services</option>
+            </optgroup>
+            <option>Both IT &amp; Accounting Services</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Tell us about your needs</label><textarea placeholder="Brief description of what you're looking for…"></textarea></div>
+        <button type="button" class="form-submit">Send My Request →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <div class="nav-logo-mark">IY</div>
+          <div class="nav-logo-text"><span class="brand">IT Yogi</span><span class="sub">Business Solutions Ltd.</span></div>
+        </a>
+        <p>Your trusted Canadian partner for Managed IT Services and Accounting &amp; Business Solutions. We help businesses grow with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>IT Services</h4>
+        <ul>
+          <li><a href="#services">Help Desk &amp; Support</a></li>
+          <li><a href="#services">Cybersecurity</a></li>
+          <li><a href="#services">Network Management</a></li>
+          <li><a href="#services">Cloud Services</a></li>
+          <li><a href="#services">Backup &amp; Recovery</a></li>
+          <li><a href="#services">IT Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accounting</h4>
+        <ul>
+          <li><a href="#services">Payroll</a></li>
+          <li><a href="#services">Bookkeeping</a></li>
+          <li><a href="#services">Tax Returns</a></li>
+          <li><a href="#services">Corporation Setup</a></li>
+          <li><a href="#services">GST / PST</a></li>
+          <li><a href="#services">ERP Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why-us">About Us</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Free Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 <span class="footer-gold">IT Yogi Business Solutions Ltd.</span> All rights reserved.</p>
+      <p>Proudly serving Canadian businesses 🇨🇦</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 40 ? '0 4px 32px rgba(0,0,0,0.25)' : 'none';
+    });
+    document.querySelector('.form-submit').addEventListener('click', function() {
+      this.textContent = "✓ Message Sent! We'll be in touch soon.";
+      this.style.background = '#1a6b3c';
+      this.disabled = true;
+    });
+  </script>
+</body>
+</html>
