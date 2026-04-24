@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IT Yogi | Integrated IT, Accounting & AI Solutions | Based in Smithers, BC</title>
-  <meta name="description" content="IT Yogi provides Managed IT, Integrated Accounting, and AI Automation. Serving businesses along the Highway 16 corridor from Prince George to Prince Rupert."/>
+  <title>IT Yogi | Managed IT & AI Automation Solutions | Based in Smithers, BC</title>
+  <meta name="description" content="IT Yogi Network Solutions provides Managed IT Services and AI Automation. Serving businesses along the Highway 16 corridor from Prince George to Prince Rupert."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -153,11 +153,11 @@
     
     .section-subtitle { font-size: 18px; line-height: 1.6; color: var(--gray); max-width: 700px; margin: 0 auto; font-weight: 300; }
 
-    /* SERVICES - 3 PILLARS */
+    /* SERVICES - 2 PILLARS */
     .services { background: var(--cream); position: relative; }
     .services::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100%; background: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity: 0.03; pointer-events: none; }
     
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; position: relative; z-index: 2; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 32px; position: relative; z-index: 2; max-width: 960px; margin: 0 auto; }
     
     .service-card {
       background: var(--white); border-radius: 20px; overflow: hidden; 
@@ -282,7 +282,7 @@
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 1100px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; max-width: 560px; }
       .contact-inner { gap: 50px; }
     }
     @media (max-width: 900px) {
@@ -314,7 +314,7 @@
       <div class="nav-logo-mark">IY</div>
       <div class="nav-logo-text">
         <span class="brand">IT Yogi</span>
-        <span class="sub">Business Solutions</span>
+        <span class="sub">Network Solutions</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -343,27 +343,27 @@
     <div class="hero-bg-orb hero-bg-orb-2"></div>
     <div class="hero-content">
       <div class="hero-location">📍 Based in Smithers. Serving Prince George to Prince Rupert.</div>
-      <h1>Integrated <em>IT, Accounting</em> & AI Automation.</h1>
-      <p class="hero-tagline">One partner. Three pillars. Total business clarity.</p>
+      <h1>Managed <em>IT Services</em> & AI Automation.</h1>
+      <p class="hero-tagline">One partner. Two pillars. Total operational clarity.</p>
       <p class="hero-desc">
-        We bridge the gap between your technology, your finances, and your growth. From managing your IT infrastructure to handling your corporate taxes and automating your office—we provide the integrated support local businesses need to scale.
+        We bridge the gap between your technology and your growth. From securing your IT infrastructure and managing your cloud environment, to automating the admin work that slows you down — we provide the integrated support local businesses need to scale.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Request Your Free Audit</a>
-        <a href="#services" class="btn-outline">Explore Our Pillars</a>
+        <a href="#services" class="btn-outline">Explore Our Services</a>
       </div>
     </div>
   </section>
 
   <div class="local-banner">
-    <p>🏔️ <strong>Local Presence. Personal Commitment.</strong> Based in Smithers and serving the Highway 16 corridor. From Prince George to Prince Rupert, we're your dedicated local business partner.</p>
+    <p>🏔️ <strong>Local Presence. Personal Commitment.</strong> Based in Smithers and serving the Highway 16 corridor. From Prince George to Prince Rupert, we're your dedicated local IT partner.</p>
   </div>
 
   <section class="services" id="services">
     <div class="section-intro">
       <div class="section-tag">Integrated Solutions</div>
-      <h2 class="section-title">The <em>Three Pillars</em> of Your Success</h2>
-      <p class="section-subtitle">We don't believe in siloed services. Your IT should support your books, and your automation should simplify both.</p>
+      <h2 class="section-title">The <em>Two Pillars</em> of Your Success</h2>
+      <p class="section-subtitle">We don't believe in siloed services. Your IT infrastructure should power your automation, and your automation should amplify your entire operation.</p>
     </div>
 
     <div class="services-grid">
@@ -376,11 +376,11 @@
         </div>
         <div class="service-card-body">
           <ul>
-            <li><strong>Help Desk:</strong> Responsive support for your team.</li>
-            <li><strong>Cybersecurity:</strong> Modern threat protection & audits.</li>
-            <li><strong>Cloud Management:</strong> Expert M365 & Google Workspace setup.</li>
-            <li><strong>Infrastructure:</strong> Network, Wi-Fi & hardware management.</li>
-            <li><strong>Backups:</strong> Bulletproof disaster recovery plans.</li>
+            <li><strong>Help Desk:</strong> <span>Responsive support for your team.</span></li>
+            <li><strong>Cybersecurity:</strong> <span>Modern threat protection & audits.</span></li>
+            <li><strong>Cloud Management:</strong> <span>Expert M365 & Google Workspace setup.</span></li>
+            <li><strong>Infrastructure:</strong> <span>Network, Wi-Fi & hardware management.</span></li>
+            <li><strong>Backups:</strong> <span>Bulletproof disaster recovery plans.</span></li>
           </ul>
         </div>
         <div class="service-card-footer">
@@ -388,29 +388,8 @@
         </div>
       </div>
 
-      <!-- PILLAR 2: ACCOUNTING -->
+      <!-- PILLAR 2: AI & AUTOMATION -->
       <div class="service-card" style="border-top: 4px solid var(--gold);">
-        <div class="service-card-header">
-          <div class="service-icon">📊</div>
-          <h3>Integrated Accounting</h3>
-          <p>Financial Precision for the Northwest</p>
-        </div>
-        <div class="service-card-body">
-          <ul>
-            <li><strong>Bookkeeping:</strong> Clean, monthly financial reporting.</li>
-            <li><strong>Corporate Tax:</strong> Compliant T2 prep & year-end.</li>
-            <li><strong>Payroll:</strong> Managed processing & CRA filing.</li>
-            <li><strong>GST/PST:</strong> Systematic registration & submission.</li>
-            <li><strong>New Business:</strong> Corporation setup & registration.</li>
-          </ul>
-        </div>
-        <div class="service-card-footer">
-          <a href="#contact" class="btn-text">Get Your Books Sorted →</a>
-        </div>
-      </div>
-
-      <!-- PILLAR 3: AI & AUTOMATION -->
-      <div class="service-card">
         <div class="service-card-header">
           <div class="service-icon">🤖</div>
           <h3>AI & Automation</h3>
@@ -418,11 +397,11 @@
         </div>
         <div class="service-card-body">
           <ul>
-            <li><strong>Workflow Audit:</strong> Finding and fixing admin leaks.</li>
-            <li><strong>Auto-Admin:</strong> Automating quotes & inquiries.</li>
-            <li><strong>Process Mapping:</strong> Streamlining manual handoffs.</li>
-            <li><strong>AI Assistants:</strong> Data entry & categorization.</li>
-            <li><strong>Custom Flows:</strong> Integrated systems to save hours.</li>
+            <li><strong>Workflow Audit:</strong> <span>Finding and fixing admin bottlenecks.</span></li>
+            <li><strong>Auto-Admin:</strong> <span>Automating quotes & client inquiries.</span></li>
+            <li><strong>Process Mapping:</strong> <span>Streamlining manual handoffs.</span></li>
+            <li><strong>AI Assistants:</strong> <span>Data entry & categorization tools.</span></li>
+            <li><strong>Custom Flows:</strong> <span>Integrated systems to save hours weekly.</span></li>
           </ul>
         </div>
         <div class="service-card-footer">
@@ -436,8 +415,8 @@
     <div class="promise-inner">
       <div class="promise-content">
         <div class="section-tag">Why IT Yogi</div>
-        <h2 class="section-title">The Only <em>Integrated Partner</em> in the Northwest</h2>
-        <p class="section-subtitle">Most IT guys don't understand your books. Most accountants don't understand your tech. We are the bridge between both.</p>
+        <h2 class="section-title">The Only <em>Integrated IT Partner</em> in the Northwest</h2>
+        <p class="section-subtitle">Most IT providers just keep the lights on. We combine network expertise with intelligent automation to help your business run faster and smarter.</p>
         
         <div class="promise-list">
           <div class="promise-item">
@@ -446,15 +425,15 @@
           </div>
           <div class="promise-item">
             <h4>Zero Silos</h4>
-            <p>We make sure your technology, accounting software, and admin workflows talk to each other.</p>
+            <p>We make sure your technology stack and automation workflows are fully connected and speaking the same language.</p>
           </div>
           <div class="promise-item">
-            <h4>CRA Compliant</h4>
-            <p>Every solution we implement considers Canadian tax and privacy requirements.</p>
+            <h4>Canadian Compliance</h4>
+            <p>Every solution we implement meets Canadian privacy and data sovereignty requirements.</p>
           </div>
           <div class="promise-item">
             <h4>Personal Commitment</h4>
-            <p>As a new business, we are dedicated to providing personalized, hands-on support for your growth.</p>
+            <p>As a growing local business, we are dedicated to providing personalized, hands-on support every step of the way.</p>
           </div>
         </div>
       </div>
@@ -462,12 +441,12 @@
       <div class="promise-visual">
         <div class="promise-box">
           <h3>The Yogi Advantage</h3>
-          <p>Our integrated approach saves local business owners <strong>5 to 15 hours per week</strong> in repetitive office work.</p>
+          <p>Our integrated approach saves local business owners <strong>5 to 15 hours per week</strong> in repetitive office and admin work.</p>
           <ul>
-            <li>✅ One point of contact for IT, Books & AI</li>
-            <li>✅ Specialized audits and implementation</li>
+            <li>✅ One point of contact for IT & AI Automation</li>
+            <li>✅ Specialized audits and rapid implementation</li>
             <li>✅ Systems that scale as you grow</li>
-            <li>✅ Less admin, more billable work</li>
+            <li>✅ Less admin overhead, more billable work</li>
           </ul>
         </div>
       </div>
@@ -478,7 +457,7 @@
     <div class="section-intro">
       <div class="section-tag">Who We Serve</div>
       <h2 class="section-title">Built for <em>Northwest Businesses</em></h2>
-      <p class="section-subtitle">From professional clinics to heavy industrial yards, we help businesses across the region reclaim their time.</p>
+      <p class="section-subtitle">From professional clinics to heavy industrial yards, we help businesses across the region reclaim their time and secure their operations.</p>
     </div>
     <div class="industries-grid">
       <div class="industry-card"><span class="emoji">🔧</span><p>Trades & Contractors</p></div>
@@ -494,28 +473,28 @@
     <div class="section-intro">
       <div class="section-tag">Our Process</div>
       <h2 class="section-title">A Clear Path to <em>Clarity</em></h2>
-      <p class="section-subtitle">A simple, four-step journey to getting your business running like a machine.</p>
+      <p class="section-subtitle">A simple, four-step journey to getting your business running like a well-oiled machine.</p>
     </div>
     <div class="process-steps">
       <div class="process-step">
         <div class="process-step-num">01</div>
         <h4>Discovery</h4>
-        <p>We map your current tech and finance workflows to find improvements.</p>
+        <p>We map your current tech stack and workflows to uncover inefficiencies.</p>
       </div>
       <div class="process-step">
         <div class="process-step-num">02</div>
-        <h4>Pillar Audit</h4>
-        <p>We identify leaks in your IT security, your books, and your admin time.</p>
+        <h4>Systems Audit</h4>
+        <p>We identify gaps in your IT security, network, and admin processes.</p>
       </div>
       <div class="process-step">
         <div class="process-step-num">03</div>
         <h4>Integration</h4>
-        <p>We deploy your systems, clean your records, and automate the manual stuff.</p>
+        <p>We deploy your systems, harden your network, and automate the manual work.</p>
       </div>
       <div class="process-step">
         <div class="process-step-num">04</div>
         <h4>Partner Support</h4>
-        <p>Ongoing support to keep your IT secure, books CRA-ready, and AI sharp.</p>
+        <p>Ongoing support to keep your IT secure, resilient, and your automation sharp.</p>
       </div>
     </div>
   </section>
@@ -524,7 +503,7 @@
     <div class="contact-inner">
       <div class="contact-info">
         <div class="contact-info-card">
-          <h2>Let's <em>Get</em> Started.</h2>
+          <h2>Let's Get Started.</h2>
           <div class="contact-info-items">
             <div class="contact-item">
               <div class="contact-item-icon">📧</div>
@@ -552,9 +531,9 @@
       </div>
       
       <div class="contact-form-wrap">
-        <h3>Request a Free Business Audit</h3>
+        <h3>Request a Free IT Audit</h3>
         <div class="form-cta-container">
-          <p>Most local business owners spend 10+ hours a week on repetitive office work. Click below to fill out our quick audit form and find out how much time we can save you.</p>
+          <p>Most local business owners spend 10+ hours a week on repetitive admin and IT issues. Click below to fill out our quick audit form and find out how much time we can save you.</p>
           <a href="https://forms.cloud.microsoft/r/9aLDchxRiw" target="_blank" class="btn-primary">Start My Free Audit Now →</a>
           <p style="margin-top: 20px; font-size: 13px; opacity: 0.8;">Secure & Confidential | Powered by Microsoft Forms</p>
         </div>
@@ -567,17 +546,17 @@
       <div class="footer-brand">
         <a href="#" class="nav-logo">
           <div class="nav-logo-mark">IY</div>
-          <div class="nav-logo-text"><span class="brand">IT Yogi</span><span class="sub">Business Solutions Ltd.</span></div>
+          <div class="nav-logo-text"><span class="brand">IT Yogi</span><span class="sub">Network Solutions Ltd.</span></div>
         </a>
-        <p>Your local Highway 16 partner for Integrated IT, Accounting, and AI Automation. Based in Smithers, BC.</p>
+        <p>Your local Highway 16 partner for Managed IT Services and AI Automation. Based in Smithers, BC.</p>
       </div>
       <div class="footer-col">
         <h4>Solutions</h4>
         <ul>
           <li><a href="#services">Managed IT</a></li>
-          <li><a href="#services">Accounting</a></li>
+          <li><a href="#services">Cybersecurity</a></li>
+          <li><a href="#services">Cloud Management</a></li>
           <li><a href="#services">AI Automation</a></li>
-          <li><a href="#services">Tax Planning</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -601,7 +580,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 IT Yogi Business Solutions Ltd. All rights reserved.</p>
+      <p>© 2026 IT Yogi Network Solutions Ltd. All rights reserved.</p>
       <div class="footer-tagline">Simplicity in every system.</div>
     </div>
   </footer>
