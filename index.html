@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IT Yogi | Managed IT & AI Automation Solutions | Based in Smithers, BC</title>
-  <meta name="description" content="IT Yogi Network Solutions provides Managed IT Services and AI Automation. Serving businesses along the Highway 16 corridor from Prince George to Prince Rupert."/>
+  <title>IT Yogi | Managed IT, Web Development & AI Automation | Smithers, BC</title>
+  <meta name="description" content="IT Yogi Network Solutions — Managed IT, Web Development, AI Automation, IT Procurement, and Home Tech Support. Serving Prince George to Prince Rupert along Highway 16."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -47,11 +47,9 @@
     .nav-logo-text span { display: block; }
     .brand { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; letter-spacing: 0.02em; }
     .sub   { font-size: 11px; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
-    
-    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; transition: all .2s; }
     .nav-links a:hover { color: var(--gold-light); }
-    
     .nav-cta {
       background: var(--gold); color: var(--navy); border: none; padding: 12px 26px; border-radius: 8px;
       font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer;
@@ -59,10 +57,8 @@
       box-shadow: 0 4px 14px rgba(201,149,42,0.2);
     }
     .nav-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,149,42,0.4); }
-    
     .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; background: none; border: none; padding: 4px; }
     .hamburger span { width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
-
     #mobile-menu {
       display: none; position: fixed; top: 80px; left: 0; right: 0; z-index: 998;
       background: rgba(11,29,58,0.98); padding: 30px 5%; flex-direction: column; gap: 24px;
@@ -84,10 +80,8 @@
     }
     .hero-bg-orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; opacity: 0.6; }
     .hero-bg-orb-1 { width: 600px; height: 600px; right: -100px; top: -150px; background: rgba(201,149,42,0.15); }
-    .hero-bg-orb-2 { width: 500px; height: 500px; left: -100px; bottom: -100px; background: rgba(19, 36, 68, 0.8); }
-    
-    .hero-content { position: relative; z-index: 2; max-width: 840px; }
-
+    .hero-bg-orb-2 { width: 500px; height: 500px; left: -100px; bottom: -100px; background: rgba(19,36,68,0.8); }
+    .hero-content { position: relative; z-index: 2; max-width: 860px; }
     .hero-location {
       display: inline-flex; align-items: center; gap: 10px;
       background: rgba(201,149,42,0.1); border: 1px solid rgba(201,149,42,0.2);
@@ -101,7 +95,6 @@
       animation: fadeInUp .7s .2s both;
     }
     .hero h1 em { font-style: italic; color: var(--gold-light); font-weight: 400; }
-    
     .hero-tagline {
       font-size: clamp(20px, 3vw, 28px); font-weight: 300;
       color: rgba(255,255,255,0.85); margin-bottom: 32px;
@@ -114,7 +107,6 @@
       animation: fadeInUp .7s .4s both;
     }
     .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; animation: fadeInUp .7s .5s both; }
-    
     .btn-primary {
       background: var(--gold); color: var(--navy); padding: 18px 36px; border-radius: 8px;
       font-weight: 600; font-size: 16px; text-decoration: none;
@@ -122,7 +114,6 @@
       box-shadow: 0 4px 14px rgba(201,149,42,0.3);
     }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(201,149,42,0.5); }
-    
     .btn-outline {
       background: transparent; color: var(--white); padding: 18px 36px; border-radius: 8px;
       border: 1px solid rgba(255,255,255,0.25); font-weight: 500; font-size: 16px; text-decoration: none;
@@ -130,11 +121,49 @@
     }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); background: rgba(201,149,42,0.05); }
 
+    /* AUDIENCE SPLIT */
+    .audience-split {
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .audience-half {
+      padding: 36px 8%;
+      display: flex; align-items: center; gap: 20px;
+      transition: background 0.3s; cursor: pointer; text-decoration: none;
+    }
+    .audience-half:first-child { border-right: 1px solid var(--gray-light); background: var(--navy); }
+    .audience-half:first-child:hover { background: var(--navy-light); }
+    .audience-half:last-child { background: var(--white); }
+    .audience-half:last-child:hover { background: var(--cream); }
+    .audience-icon {
+      font-size: 32px; flex-shrink: 0;
+      width: 60px; height: 60px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 14px;
+    }
+    .audience-half:first-child .audience-icon { background: rgba(201,149,42,0.15); }
+    .audience-half:last-child .audience-icon { background: var(--cream); border: 1px solid var(--gray-light); }
+    .audience-text .label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; }
+    .audience-half:first-child .audience-text .label { color: var(--gold-light); }
+    .audience-half:last-child .audience-text .label { color: var(--gold); }
+    .audience-text h3 { font-size: 19px; font-weight: 600; margin-bottom: 4px; }
+    .audience-half:first-child .audience-text h3 { color: var(--white); }
+    .audience-half:last-child .audience-text h3 { color: var(--navy); }
+    .audience-text p { font-size: 13px; font-weight: 300; }
+    .audience-half:first-child .audience-text p { color: rgba(255,255,255,0.5); }
+    .audience-half:last-child .audience-text p { color: var(--gray); }
+    .audience-arrow { margin-left: auto; font-size: 22px; transition: transform 0.3s; flex-shrink: 0; }
+    .audience-half:first-child .audience-arrow { color: var(--gold); }
+    .audience-half:last-child .audience-arrow { color: var(--navy); }
+    .audience-half:hover .audience-arrow { transform: translateX(6px); }
+
     /* LOCAL BANNER */
     .local-banner {
-      background: var(--navy-light); padding: 32px 5%;
+      background: var(--navy-light); padding: 28px 5%;
       display: flex; justify-content: center; align-items: center;
-      border-top: 1px solid rgba(201,149,42,0.1); border-bottom: 1px solid rgba(201,149,42,0.1);
+      border-bottom: 1px solid rgba(201,149,42,0.1);
     }
     .local-banner p { color: rgba(255,255,255,0.85); font-size: 16px; font-weight: 400; text-align: center; max-width: 800px; }
     .local-banner strong { color: var(--gold-light); font-weight: 600; }
@@ -147,81 +176,97 @@
       color: var(--gold); margin-bottom: 24px; position: relative; padding-left: 50px;
     }
     .section-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 40px; height: 1px; background: var(--gold); }
-    
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 600; line-height: 1.1; color: var(--navy); margin-bottom: 24px; }
     .section-title em { font-style: italic; color: var(--gold); font-weight: 400; }
-    
     .section-subtitle { font-size: 18px; line-height: 1.6; color: var(--gray); max-width: 700px; margin: 0 auto; font-weight: 300; }
 
-    /* SERVICES - 2 PILLARS */
+    /* SERVICES */
     .services { background: var(--cream); position: relative; }
-    .services::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100%; background: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity: 0.03; pointer-events: none; }
-    
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 32px; position: relative; z-index: 2; max-width: 960px; margin: 0 auto; }
-    
+    .services::before { content: ''; position: absolute; inset: 0; background: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity: 0.03; pointer-events: none; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; z-index: 2; }
     .service-card {
-      background: var(--white); border-radius: 20px; overflow: hidden; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: var(--white); border-radius: 20px; overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
       display: flex; flex-direction: column; border: 1px solid var(--gray-light);
-      height: 100%;
     }
-    .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(11, 29, 58, 0.1); border-color: var(--gold); }
-    
-    .service-card-header { padding: 48px 40px 32px; background: var(--navy); position: relative; color: var(--white); min-height: 220px; }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(11,29,58,0.1); border-color: var(--gold); }
+    .service-card-header { padding: 40px 36px 28px; background: var(--navy); position: relative; color: var(--white); min-height: 200px; }
     .service-card-header::after { content: ''; position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(201,149,42,0.15), transparent 70%); }
-    
-    .service-icon { width: 64px; height: 64px; margin-bottom: 24px; background: rgba(201,149,42,0.1); border: 1px solid rgba(201,149,42,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
-    .service-card-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; margin-bottom: 12px; }
-    .service-card-header p { font-size: 14px; color: rgba(255,255,255,0.5); font-weight: 300; }
-    
-    .service-card-body { padding: 40px; flex-grow: 1; }
-    .service-card-body ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
-    .service-card-body li { 
-      display: flex; 
-      align-items: flex-start; 
-      gap: 12px; 
-      font-size: 15px; 
-      color: var(--text); 
-      font-weight: 400; 
-      line-height: 1.4;
-    }
-    .service-card-body li::before { 
-      content: '→'; 
-      color: var(--gold); 
-      font-weight: 700; 
-      flex-shrink: 0; 
-      width: 20px;
-      margin-top: 1px;
-    }
-    .service-card-body li strong {
-      flex: 0 0 145px;
-      color: var(--navy);
-    }
-    .service-card-body li span {
-      flex: 1;
-    }
-    
-    .service-card-footer { padding: 0 40px 40px; }
+    .service-icon { width: 60px; height: 60px; margin-bottom: 20px; background: rgba(201,149,42,0.1); border: 1px solid rgba(201,149,42,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+    .service-card-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; margin-bottom: 10px; }
+    .service-card-header p { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 300; }
+    .service-card-body { padding: 36px; flex-grow: 1; }
+    .service-card-body ul { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+    .service-card-body li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.45; }
+    .service-card-body li::before { content: '→'; color: var(--gold); font-weight: 700; flex-shrink: 0; width: 18px; margin-top: 1px; }
+    .service-card-body li strong { color: var(--navy); font-weight: 600; }
+    .service-card-footer { padding: 0 36px 36px; }
     .btn-text { color: var(--gold); text-decoration: none; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
     .btn-text:hover { color: var(--navy); gap: 12px; }
 
-    /* THE IT YOGI PROMISE */
-    .promise { background: var(--white); overflow: hidden; }
+    /* HOME USERS */
+    .home-users { background: var(--white); }
+    .home-users-inner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 100%);
+      border-radius: 28px; padding: 80px; position: relative; overflow: hidden;
+    }
+    .home-users-inner::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(201,149,42,0.12), transparent 70%); pointer-events: none;
+    }
+    .home-users-inner::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0);
+      background-size: 32px 32px; pointer-events: none;
+    }
+    .home-users-top {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+      align-items: center; position: relative; z-index: 2; margin-bottom: 60px;
+    }
+    .home-users-heading .section-tag { color: var(--gold-light); }
+    .home-users-heading .section-tag::before { background: var(--gold-light); }
+    .home-users-heading .section-title { color: var(--white); text-align: left; font-size: clamp(32px, 4vw, 48px); }
+    .home-users-heading .section-title em { color: var(--gold-light); }
+    .home-users-heading p { font-size: 17px; color: rgba(255,255,255,0.6); font-weight: 300; line-height: 1.7; margin-top: 16px; }
+    .home-users-heading .hero-actions { margin-top: 32px; }
+    .home-price-note {
+      background: rgba(201,149,42,0.12); border: 1px solid rgba(201,149,42,0.25);
+      border-radius: 16px; padding: 32px; margin-bottom: 28px; text-align: center;
+    }
+    .home-price-note p { color: rgba(255,255,255,0.5); font-size: 12px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+    .home-price-note strong { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: var(--gold-light); display: block; line-height: 1; margin-bottom: 6px; }
+    .home-price-note span { color: rgba(255,255,255,0.45); font-size: 13px; }
+    .home-reseller-note { color: rgba(255,255,255,0.45); font-size: 14px; line-height: 1.65; text-align: center; }
+    .home-reseller-note strong { color: var(--gold-light); }
+    .home-users-cards {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      position: relative; z-index: 2;
+    }
+    .home-service-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 28px 24px; text-align: center; transition: all 0.3s;
+    }
+    .home-service-card:hover { background: rgba(201,149,42,0.08); border-color: rgba(201,149,42,0.35); transform: translateY(-4px); }
+    .home-service-card .emoji { font-size: 30px; margin-bottom: 12px; display: block; }
+    .home-service-card h4 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .home-service-card p { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.5; }
+
+    /* PROMISE */
+    .promise { background: var(--cream); overflow: hidden; }
     .promise-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
     .promise-content h2 { text-align: left; }
     .promise-list { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-    .promise-item { padding: 24px; border-radius: 16px; background: var(--cream); border: 1px solid transparent; transition: 0.3s; }
-    .promise-item:hover { border-color: var(--gold); background: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .promise-item { padding: 24px; border-radius: 16px; background: var(--white); border: 1px solid transparent; transition: 0.3s; }
+    .promise-item:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
     .promise-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--navy); }
     .promise-item p { font-size: 14px; color: var(--gray); font-weight: 300; }
-    
     .promise-visual { position: relative; }
     .promise-box { background: var(--navy); padding: 50px; border-radius: 24px; color: var(--white); position: relative; z-index: 2; box-shadow: 0 30px 60px rgba(11,29,58,0.2); }
     .promise-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--gold-light); margin-bottom: 20px; }
     .promise-box p { font-size: 16px; opacity: 0.8; margin-bottom: 30px; font-weight: 300; }
     .promise-box ul { list-style: none; display: flex; flex-direction: column; gap: 15px; }
     .promise-box li { display: flex; align-items: center; gap: 15px; font-size: 15px; }
-    .promise-box li i { color: var(--gold); font-size: 18px; }
     .promise-visual::after { content: ''; position: absolute; inset: -20px; border: 2px solid var(--gold); border-radius: 30px; z-index: 1; opacity: 0.2; }
 
     /* PROCESS */
@@ -243,27 +288,19 @@
     .industry-card .emoji { font-size: 32px; margin-bottom: 15px; display: block; }
     .industry-card p { font-weight: 600; color: var(--navy); font-size: 15px; }
 
-    /* CONTACT SECTION */
+    /* CONTACT */
     .contact { background: var(--white); }
     .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
-    .contact-info-card { background: var(--navy); color: var(--white); padding: 50px; border-radius: 24px; position: relative; overflow: hidden; }
+    .contact-info-card { background: var(--navy); color: var(--white); padding: 50px; border-radius: 24px; }
     .contact-info-card h2 { color: var(--white); text-align: left; font-size: 42px; margin-bottom: 30px; }
     .contact-info-items { display: flex; flex-direction: column; gap: 30px; }
     .contact-item { display: flex; gap: 20px; align-items: flex-start; }
     .contact-item-icon { width: 50px; height: 50px; flex-shrink: 0; background: rgba(255,255,255,0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--gold-light); border: 1px solid rgba(255,255,255,0.1); }
     .contact-item h5 { font-size: 14px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
     .contact-item p { font-size: 18px; font-weight: 500; }
-    
     .contact-form-wrap { padding: 20px 0; }
     .contact-form-wrap h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--navy); margin-bottom: 30px; }
-    
-    .form-cta-container { 
-      background: var(--cream); 
-      padding: 50px; 
-      border-radius: 20px; 
-      text-align: center;
-      border: 1px solid var(--gray-light);
-    }
+    .form-cta-container { background: var(--cream); padding: 50px; border-radius: 20px; text-align: center; border: 1px solid var(--gray-light); }
     .form-cta-container p { margin-bottom: 30px; color: var(--gray); font-size: 16px; }
 
     /* FOOTER */
@@ -274,16 +311,19 @@
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .footer-col li a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 14px; transition: 0.2s; }
     .footer-col li a:hover { color: var(--gold-light); padding-left: 5px; }
-    
     .footer-bottom { padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
     .footer-bottom p { font-size: 13px; }
     .footer-tagline { color: var(--gold-light); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 18px; }
 
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-    @media (max-width: 1100px) {
-      .services-grid { grid-template-columns: 1fr; max-width: 560px; }
-      .contact-inner { gap: 50px; }
+    @media (max-width: 1200px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .home-users-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 1000px) {
+      .home-users-top { grid-template-columns: 1fr; gap: 40px; }
+      .home-users-inner { padding: 50px 40px; }
     }
     @media (max-width: 900px) {
       .promise-inner, .contact-inner { grid-template-columns: 1fr; }
@@ -299,11 +339,15 @@
       .hero h1 { font-size: 48px; }
       .services-grid { grid-template-columns: 1fr; }
       .promise-list { grid-template-columns: 1fr; }
+      .audience-split { grid-template-columns: 1fr; }
+      .audience-half:first-child { border-right: none; border-bottom: 1px solid rgba(201,149,42,0.2); }
     }
     @media (max-width: 480px) {
       .process-steps { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
       section { padding: 80px 5%; }
+      .home-users-cards { grid-template-columns: 1fr; }
+      .home-users-inner { padding: 36px 24px; }
     }
   </style>
 </head>
@@ -318,9 +362,9 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
+      <li><a href="#services">Business Services</a></li>
+      <li><a href="#home-users">Home Support</a></li>
       <li><a href="#promise">Our Promise</a></li>
-      <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Get Started</a>
@@ -330,9 +374,9 @@
   </nav>
 
   <div id="mobile-menu">
-    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#services" onclick="toggleMenu()">Business Services</a>
+    <a href="#home-users" onclick="toggleMenu()">Home Support</a>
     <a href="#promise" onclick="toggleMenu()">Our Promise</a>
-    <a href="#process" onclick="toggleMenu()">Process</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
     <a href="#contact" class="nav-cta" onclick="toggleMenu()">Get Started</a>
   </div>
@@ -343,10 +387,10 @@
     <div class="hero-bg-orb hero-bg-orb-2"></div>
     <div class="hero-content">
       <div class="hero-location">📍 Based in Smithers. Serving Prince George to Prince Rupert.</div>
-      <h1>Managed <em>IT Services</em> & AI Automation.</h1>
-      <p class="hero-tagline">One partner. Two pillars. Total operational clarity.</p>
+      <h1>Managed IT, <em>Web & AI</em> Automation.</h1>
+      <p class="hero-tagline">For businesses and home users across the Northwest.</p>
       <p class="hero-desc">
-        We bridge the gap between your technology and your growth. From securing your IT infrastructure and managing your cloud environment, to automating the admin work that slows you down — we provide the integrated support local businesses need to scale.
+        From securing your business network and building your website, to automating the admin work that eats your day — we're the local technology partner that handles it all. Business or home user, we've got you covered.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Request Your Free Audit</a>
@@ -355,19 +399,41 @@
     </div>
   </section>
 
-  <div class="local-banner">
-    <p>🏔️ <strong>Local Presence. Personal Commitment.</strong> Based in Smithers and serving the Highway 16 corridor. From Prince George to Prince Rupert, we're your dedicated local IT partner.</p>
+  <!-- AUDIENCE SPLIT BANNER -->
+  <div class="audience-split">
+    <a href="#services" class="audience-half">
+      <div class="audience-icon">🏢</div>
+      <div class="audience-text">
+        <div class="label">For Business Owners</div>
+        <h3>Business IT Solutions</h3>
+        <p>Managed IT, web development, AI automation & procurement</p>
+      </div>
+      <div class="audience-arrow">→</div>
+    </a>
+    <a href="#home-users" class="audience-half">
+      <div class="audience-icon">🏠</div>
+      <div class="audience-text">
+        <div class="label">For Home Users</div>
+        <h3>Personal Tech Support</h3>
+        <p>Device setup, PC repair, home networks & hardware buying</p>
+      </div>
+      <div class="audience-arrow">→</div>
+    </a>
   </div>
 
+  <div class="local-banner">
+    <p>🏔️ <strong>Local Presence. Personal Commitment.</strong> Based in Smithers and serving the Highway 16 corridor. From Prince George to Prince Rupert, we're your dedicated local technology partner.</p>
+  </div>
+
+  <!-- BUSINESS SERVICES -->
   <section class="services" id="services">
     <div class="section-intro">
-      <div class="section-tag">Integrated Solutions</div>
-      <h2 class="section-title">The <em>Two Pillars</em> of Your Success</h2>
-      <p class="section-subtitle">We don't believe in siloed services. Your IT infrastructure should power your automation, and your automation should amplify your entire operation.</p>
+      <div class="section-tag">Business Solutions</div>
+      <h2 class="section-title">Three Pillars for <em>Business Growth</em></h2>
+      <p class="section-subtitle">We connect your IT infrastructure, your online presence, and your automation so everything works together as one system.</p>
     </div>
-
     <div class="services-grid">
-      <!-- PILLAR 1: IT -->
+
       <div class="service-card">
         <div class="service-card-header">
           <div class="service-icon">💻</div>
@@ -376,11 +442,12 @@
         </div>
         <div class="service-card-body">
           <ul>
-            <li><strong>Help Desk:</strong> <span>Responsive support for your team.</span></li>
-            <li><strong>Cybersecurity:</strong> <span>Modern threat protection & audits.</span></li>
-            <li><strong>Cloud Management:</strong> <span>Expert M365 & Google Workspace setup.</span></li>
-            <li><strong>Infrastructure:</strong> <span>Network, Wi-Fi & hardware management.</span></li>
-            <li><strong>Backups:</strong> <span>Bulletproof disaster recovery plans.</span></li>
+            <li><strong>Help Desk</strong> — Responsive support for your team.</li>
+            <li><strong>Cybersecurity</strong> — Threat protection & security audits.</li>
+            <li><strong>Cloud Management</strong> — M365 & Google Workspace setup.</li>
+            <li><strong>Network & Wi-Fi</strong> — Infrastructure & hardware management.</li>
+            <li><strong>Backups & DR</strong> — Bulletproof disaster recovery plans.</li>
+            <li><strong>IT Procurement</strong> — Hardware & software at reseller pricing.</li>
           </ul>
         </div>
         <div class="service-card-footer">
@@ -388,8 +455,28 @@
         </div>
       </div>
 
-      <!-- PILLAR 2: AI & AUTOMATION -->
       <div class="service-card" style="border-top: 4px solid var(--gold);">
+        <div class="service-card-header">
+          <div class="service-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p>Your Digital Presence, Built Right</p>
+        </div>
+        <div class="service-card-body">
+          <ul>
+            <li><strong>Business Websites</strong> — Professional sites that convert visitors.</li>
+            <li><strong>E-commerce Stores</strong> — Online stores ready to sell from day one.</li>
+            <li><strong>Landing Pages</strong> — Focused pages for campaigns & leads.</li>
+            <li><strong>Domain & Hosting</strong> — Setup, migration & ongoing management.</li>
+            <li><strong>Maintenance</strong> — Updates, security patches & uptime monitoring.</li>
+            <li><strong>Local SEO</strong> — Get found by customers along the corridor.</li>
+          </ul>
+        </div>
+        <div class="service-card-footer">
+          <a href="#contact" class="btn-text">Get Your Site Built →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
         <div class="service-card-header">
           <div class="service-icon">🤖</div>
           <h3>AI & Automation</h3>
@@ -397,83 +484,156 @@
         </div>
         <div class="service-card-body">
           <ul>
-            <li><strong>Workflow Audit:</strong> <span>Finding and fixing admin bottlenecks.</span></li>
-            <li><strong>Auto-Admin:</strong> <span>Automating quotes & client inquiries.</span></li>
-            <li><strong>Process Mapping:</strong> <span>Streamlining manual handoffs.</span></li>
-            <li><strong>AI Assistants:</strong> <span>Data entry & categorization tools.</span></li>
-            <li><strong>Custom Flows:</strong> <span>Integrated systems to save hours weekly.</span></li>
+            <li><strong>Workflow Audit</strong> — Find and fix your admin bottlenecks.</li>
+            <li><strong>Auto-Admin</strong> — Automate quotes, invoices & inquiries.</li>
+            <li><strong>Process Mapping</strong> — Streamline manual handoffs.</li>
+            <li><strong>AI Assistants</strong> — Smart tools for data entry & tasks.</li>
+            <li><strong>Custom Flows</strong> — Integrated systems saving hours weekly.</li>
+            <li><strong>CRM Integration</strong> — Connect your tools into one pipeline.</li>
           </ul>
         </div>
         <div class="service-card-footer">
           <a href="#contact" class="btn-text">Automate Your Growth →</a>
         </div>
       </div>
+
     </div>
   </section>
 
+  <!-- HOME USERS -->
+  <section class="home-users" id="home-users">
+    <div class="home-users-inner">
+      <div class="home-users-top">
+        <div class="home-users-heading">
+          <div class="section-tag">Home &amp; Personal</div>
+          <h2 class="section-title">Tech Help for <em>Everyone</em> in the Northwest</h2>
+          <p>You don't have to be a business to get expert tech support. Whether your laptop is crawling, your home Wi-Fi has dead zones, or you need advice picking the right device — we're your friendly, local tech team. No jargon, no judgment.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Book a Home Visit</a>
+            <a href="tel:+12508922892" class="btn-outline">Call Us Now</a>
+          </div>
+        </div>
+        <div>
+          <div class="home-price-note">
+            <p>Home Service Calls Starting From</p>
+            <strong>$79</strong>
+            <span>flat-rate diagnostic · no hidden fees</span>
+          </div>
+          <p class="home-reseller-note">
+            We also <strong>supply and set up hardware</strong> — laptops, desktops, printers, routers and more — sourced at competitive reseller pricing. No more ordering blind online and hoping it works.
+          </p>
+        </div>
+      </div>
+
+      <div class="home-users-cards">
+        <div class="home-service-card">
+          <span class="emoji">🖥️</span>
+          <h4>PC &amp; Laptop Repair</h4>
+          <p>Slow machine, virus, won't start? We diagnose and fix it fast.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">📶</span>
+          <h4>Home Wi-Fi Setup</h4>
+          <p>Dead zones, slow speeds, or a new router — we get you fully connected.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">🛒</span>
+          <h4>Device Procurement</h4>
+          <p>We source laptops, printers &amp; smart devices at reseller prices and set them up.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">🔒</span>
+          <h4>Security &amp; Privacy</h4>
+          <p>Antivirus, password managers, and family safety tools — properly configured.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">📱</span>
+          <h4>Phone &amp; Tablet Help</h4>
+          <p>Setup, data transfer, app issues and email on any device.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">🏡</span>
+          <h4>Smart Home Setup</h4>
+          <p>Smart TVs, streaming, cameras, and voice assistants — all connected.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">☁️</span>
+          <h4>Data Backup &amp; Recovery</h4>
+          <p>Don't lose your photos and files. We set up cloud backup and recover lost data.</p>
+        </div>
+        <div class="home-service-card">
+          <span class="emoji">👴</span>
+          <h4>Senior Tech Assistance</h4>
+          <p>Patient, plain-language help for seniors getting comfortable with technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
   <section class="promise" id="promise">
     <div class="promise-inner">
       <div class="promise-content">
         <div class="section-tag">Why IT Yogi</div>
-        <h2 class="section-title">The Only <em>Integrated IT Partner</em> in the Northwest</h2>
-        <p class="section-subtitle">Most IT providers just keep the lights on. We combine network expertise with intelligent automation to help your business run faster and smarter.</p>
-        
+        <h2 class="section-title">The Only <em>Full-Stack Tech Partner</em> in the Northwest</h2>
+        <p class="section-subtitle">Managed IT, web development, AI automation, hardware supply, and home tech support — all from one local team that knows this region.</p>
         <div class="promise-list">
           <div class="promise-item">
             <h4>Local Expertise</h4>
-            <p>We are based in Smithers and understand the unique challenges of doing business across Highway 16.</p>
+            <p>Based in Smithers and built for the realities of doing business along Highway 16.</p>
           </div>
           <div class="promise-item">
             <h4>Zero Silos</h4>
-            <p>We make sure your technology stack and automation workflows are fully connected and speaking the same language.</p>
+            <p>Your IT, website, and automation fully connected — managed by one team.</p>
           </div>
           <div class="promise-item">
             <h4>Canadian Compliance</h4>
-            <p>Every solution we implement meets Canadian privacy and data sovereignty requirements.</p>
+            <p>Every solution meets Canadian privacy and data sovereignty requirements.</p>
           </div>
           <div class="promise-item">
-            <h4>Personal Commitment</h4>
-            <p>As a growing local business, we are dedicated to providing personalized, hands-on support every step of the way.</p>
+            <h4>Reseller Advantage</h4>
+            <p>We source hardware and software at reseller pricing and pass the savings to you.</p>
           </div>
         </div>
       </div>
-      
       <div class="promise-visual">
         <div class="promise-box">
           <h3>The Yogi Advantage</h3>
-          <p>Our integrated approach saves local business owners <strong>5 to 15 hours per week</strong> in repetitive office and admin work.</p>
+          <p>Our integrated approach saves local business owners <strong>5 to 15 hours per week</strong> in IT issues, admin overhead, and vendor management.</p>
           <ul>
-            <li>✅ One point of contact for IT & AI Automation</li>
-            <li>✅ Specialized audits and rapid implementation</li>
-            <li>✅ Systems that scale as you grow</li>
-            <li>✅ Less admin overhead, more billable work</li>
+            <li>✅ One contact for IT, Web &amp; AI Automation</li>
+            <li>✅ Hardware sourced &amp; deployed at reseller rates</li>
+            <li>✅ Home users welcome — no job too small</li>
+            <li>✅ Systems that scale as your business grows</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- INDUSTRIES -->
   <section class="industries" id="industries">
     <div class="section-intro">
       <div class="section-tag">Who We Serve</div>
       <h2 class="section-title">Built for <em>Northwest Businesses</em></h2>
-      <p class="section-subtitle">From professional clinics to heavy industrial yards, we help businesses across the region reclaim their time and secure their operations.</p>
+      <p class="section-subtitle">From professional clinics to heavy industrial yards, we help businesses across the region secure their operations and reclaim their time.</p>
     </div>
     <div class="industries-grid">
-      <div class="industry-card"><span class="emoji">🔧</span><p>Trades & Contractors</p></div>
-      <div class="industry-card"><span class="emoji">🏥</span><p>Health & Wellness</p></div>
-      <div class="industry-card"><span class="emoji">🛒</span><p>Retail & E-commerce</p></div>
-      <div class="industry-card"><span class="emoji">🚛</span><p>Logistics & Trucking</p></div>
+      <div class="industry-card"><span class="emoji">🔧</span><p>Trades &amp; Contractors</p></div>
+      <div class="industry-card"><span class="emoji">🏥</span><p>Health &amp; Wellness</p></div>
+      <div class="industry-card"><span class="emoji">🛒</span><p>Retail &amp; E-commerce</p></div>
+      <div class="industry-card"><span class="emoji">🚛</span><p>Logistics &amp; Trucking</p></div>
       <div class="industry-card"><span class="emoji">⚖️</span><p>Professional Services</p></div>
-      <div class="industry-card"><span class="emoji">🏕️</span><p>Tourism & Lodges</p></div>
+      <div class="industry-card"><span class="emoji">🏕️</span><p>Tourism &amp; Lodges</p></div>
     </div>
   </section>
 
+  <!-- PROCESS -->
   <section class="process" id="process">
     <div class="section-intro">
       <div class="section-tag">Our Process</div>
       <h2 class="section-title">A Clear Path to <em>Clarity</em></h2>
-      <p class="section-subtitle">A simple, four-step journey to getting your business running like a well-oiled machine.</p>
+      <p class="section-subtitle">A simple, four-step journey to getting your technology running like a well-oiled machine.</p>
     </div>
     <div class="process-steps">
       <div class="process-step">
@@ -484,21 +644,22 @@
       <div class="process-step">
         <div class="process-step-num">02</div>
         <h4>Systems Audit</h4>
-        <p>We identify gaps in your IT security, network, and admin processes.</p>
+        <p>We identify gaps in your IT security, network, web presence, and admin processes.</p>
       </div>
       <div class="process-step">
         <div class="process-step-num">03</div>
         <h4>Integration</h4>
-        <p>We deploy your systems, harden your network, and automate the manual work.</p>
+        <p>We deploy systems, build your site, source hardware, and automate the manual work.</p>
       </div>
       <div class="process-step">
         <div class="process-step-num">04</div>
         <h4>Partner Support</h4>
-        <p>Ongoing support to keep your IT secure, resilient, and your automation sharp.</p>
+        <p>Ongoing support to keep your IT secure, your site live, and your automation sharp.</p>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-inner">
       <div class="contact-info">
@@ -515,27 +676,26 @@
             <div class="contact-item">
               <div class="contact-item-icon">📞</div>
               <div>
-                <h5>Call Locally</h5>
+                <h5>Call or Text Locally</h5>
                 <p>+1 (250) 892-2892</p>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-item-icon">📍</div>
               <div>
-                <h5>Main Office</h5>
+                <h5>Based In</h5>
                 <p>Smithers, BC</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
       <div class="contact-form-wrap">
         <h3>Request a Free IT Audit</h3>
         <div class="form-cta-container">
-          <p>Most local business owners spend 10+ hours a week on repetitive admin and IT issues. Click below to fill out our quick audit form and find out how much time we can save you.</p>
+          <p>Business or home user — fill out our quick form and tell us what you need. We'll get back to you within one business day with a no-obligation recommendation.</p>
           <a href="https://forms.cloud.microsoft/r/9aLDchxRiw" target="_blank" class="btn-primary">Start My Free Audit Now →</a>
-          <p style="margin-top: 20px; font-size: 13px; opacity: 0.8;">Secure & Confidential | Powered by Microsoft Forms</p>
+          <p style="margin-top: 20px; font-size: 13px; opacity: 0.8;">Secure &amp; Confidential | Powered by Microsoft Forms</p>
         </div>
       </div>
     </div>
@@ -548,24 +708,24 @@
           <div class="nav-logo-mark">IY</div>
           <div class="nav-logo-text"><span class="brand">IT Yogi</span><span class="sub">Network Solutions Ltd.</span></div>
         </a>
-        <p>Your local Highway 16 partner for Managed IT Services and AI Automation. Based in Smithers, BC.</p>
+        <p>Your local Highway 16 partner for Managed IT, Web Development, AI Automation, and Home Tech Support. Based in Smithers, BC.</p>
       </div>
       <div class="footer-col">
-        <h4>Solutions</h4>
+        <h4>Business Services</h4>
         <ul>
           <li><a href="#services">Managed IT</a></li>
-          <li><a href="#services">Cybersecurity</a></li>
-          <li><a href="#services">Cloud Management</a></li>
+          <li><a href="#services">Web Development</a></li>
           <li><a href="#services">AI Automation</a></li>
+          <li><a href="#services">IT Procurement</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h4>Home Support</h4>
         <ul>
-          <li><a href="#promise">Our Promise</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home-users">PC &amp; Laptop Repair</a></li>
+          <li><a href="#home-users">Home Wi-Fi Setup</a></li>
+          <li><a href="#home-users">Device Procurement</a></li>
+          <li><a href="#home-users">Smart Home Setup</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -589,7 +749,6 @@
     function toggleMenu() {
       document.getElementById('mobile-menu').classList.toggle('open');
     }
-
     window.addEventListener('scroll', () => {
       const navbar = document.getElementById('navbar');
       if (window.scrollY > 50) {
@@ -602,13 +761,11 @@
         navbar.style.boxShadow = 'none';
       }
     });
-
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
   </script>
